@@ -1,0 +1,15 @@
+diff --git a/setup.py b/setup.py
+index d85b33f..8d3cb4e 100644
+--- a/setup.py
++++ b/setup.py
+@@ -11,9 +11,7 @@ install_requires = [
+     'acme=={0}'.format(version),
+     'certbot=={0}'.format(version),
+     'python-augeas',
+-    # For pkg_resources. >=1.0 so pip resolves it to a version cryptography
+-    # will tolerate; see #2599:
+-    'setuptools>=1.0',
++    'setuptools',
+     'zope.component',
+     'zope.interface',
+ ]

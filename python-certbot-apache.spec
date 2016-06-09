@@ -9,13 +9,17 @@ License:    ASL 2.0
 URL:        https://pypi.python.org/pypi/certbot-apache
 Source0:    https://files.pythonhosted.org/packages/source/c/%{pyname}/%{pyname}-%{version}.tar.gz
 
+%if 0%{?rhel}
+Patch0:         allow-old-setuptools.patch
+%endif
+
 BuildArch:      noarch
 
 # certbot only supports python2 at present
 BuildRequires: python2-devel
 
 #For running tests
-BuildRequires: python2-certbot
+BuildRequires: python2-certbot = %{version}
 BuildRequires: python-augeas
 
 
@@ -29,10 +33,14 @@ Plugin for certbot that allows for automatic configuration of apache
 Provides:      %{pyname} = %{version}-%{release}
 # Although a plugin for the certbot command it's technically
 # an extension to the certbot python libraries
-Requires:      python2-certbot
+Requires:      python2-certbot = %{version}
 Requires:      python2-augeas
+%if 0%{?fedora}
 #Recommend the CLI as that will be the interface most use
 Recommends:    certbot = %{version}
+%else
+Requires:      certbot = %{version}
+%endif
 Summary:     The apache plugin for certbot   
 %{?python_provide:%python_provide python2-%{pyname}}
 
