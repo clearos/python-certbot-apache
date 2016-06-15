@@ -1,8 +1,8 @@
 %global pyname certbot-apache
 
 Name:       python-%{pyname}
-Version:    0.8.0
-Release:    2%{?dist}
+Version:    0.8.1
+Release:    1%{?dist}
 Summary:    The apache plugin for certbot
 
 License:    ASL 2.0
@@ -68,6 +68,8 @@ Plugin for certbot that allows for automatic configuration of apache
 
 
 %changelog
+* Wed Jun 15 2016 Nick Bebout <nb@fedoraproject.org> - 0.8.1-1
+- Update to 0.8.1
 * Tue Jun 07 2016 James Hogarth <james.hogarth@gmail.com> - 0.8.0-2
 - Move recommends to correct subpackage
 - change to require python-augeas as python2-augeas not provided in F23
