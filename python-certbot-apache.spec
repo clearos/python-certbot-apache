@@ -2,7 +2,7 @@
 
 Name:       python-%{pyname}
 Version:    0.8.1
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    The apache plugin for certbot
 
 License:    ASL 2.0
@@ -34,7 +34,7 @@ Provides:      %{pyname} = %{version}-%{release}
 # Although a plugin for the certbot command it's technically
 # an extension to the certbot python libraries
 Requires:      python2-certbot = %{version}
-Requires:      python2-augeas
+Requires:      python-augeas
 %if 0%{?fedora}
 #Recommend the CLI as that will be the interface most use
 Recommends:    certbot = %{version}
@@ -68,6 +68,8 @@ Plugin for certbot that allows for automatic configuration of apache
 
 
 %changelog
+* Sun Jun 19 2016 James Hogarth <james.hogarth@gmail.com> - 0.8.1-2
+- Spec bug on el7 requires - bz#1347997
 * Wed Jun 15 2016 Nick Bebout <nb@fedoraproject.org> - 0.8.1-1
 - Update to 0.8.1
 * Tue Jun 07 2016 James Hogarth <james.hogarth@gmail.com> - 0.8.0-2
