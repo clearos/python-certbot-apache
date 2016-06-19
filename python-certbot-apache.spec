@@ -34,7 +34,7 @@ Provides:      %{pyname} = %{version}-%{release}
 # Although a plugin for the certbot command it's technically
 # an extension to the certbot python libraries
 Requires:      python2-certbot = %{version}
-Requires:      python2-augeas
+Requires:      python-augeas
 %if 0%{?fedora}
 #Recommend the CLI as that will be the interface most use
 Recommends:    certbot = %{version}
