@@ -72,6 +72,8 @@ Plugin for certbot that allows for automatic configuration of apache
 - Update to 0.9.2
 * Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.8.1-2
 - https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
+* Sun Jun 19 2016 James Hogarth <james.hogarth@gmail.com> - 0.8.1-2
+- Spec bug on el7 requires - bz#1347997
 * Wed Jun 15 2016 Nick Bebout <nb@fedoraproject.org> - 0.8.1-1
 - Update to 0.8.1
 * Tue Jun 07 2016 James Hogarth <james.hogarth@gmail.com> - 0.8.0-2
