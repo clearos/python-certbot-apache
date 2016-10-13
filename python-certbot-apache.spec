@@ -49,7 +49,9 @@ Summary:     The apache plugin for certbot
 Plugin for certbot that allows for automatic configuration of apache
 
 %prep
-%autosetup -n %{pyname}-%{version}
+%setup -n %{pyname}-%{version}
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{py2_build}
