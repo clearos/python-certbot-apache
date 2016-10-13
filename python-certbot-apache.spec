@@ -11,6 +11,7 @@ Source0:    https://files.pythonhosted.org/packages/source/c/%{pyname}/%{pyname}
 
 %if 0%{?rhel}
 Patch0:         allow-old-setuptools.patch
+Patch1:         constants_test.patch
 %endif
 
 BuildArch:      noarch
