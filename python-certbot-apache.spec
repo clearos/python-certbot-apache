@@ -1,7 +1,7 @@
 %global pyname certbot-apache
 
 Name:       python-%{pyname}
-Version:    0.9.2
+Version:    0.9.3
 Release:    1%{?dist}
 Summary:    The apache plugin for certbot
 
@@ -11,7 +11,6 @@ Source0:    https://files.pythonhosted.org/packages/source/c/%{pyname}/%{pyname}
 
 %if 0%{?rhel}
 Patch0:         allow-old-setuptools.patch
-Patch1:         constants_test.patch
 %endif
 
 BuildArch:      noarch
@@ -51,7 +50,6 @@ Plugin for certbot that allows for automatic configuration of apache
 %prep
 %setup -n %{pyname}-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{py2_build}
@@ -71,6 +69,8 @@ Plugin for certbot that allows for automatic configuration of apache
 
 
 %changelog
+* Fri Oct 14 2016 Nick Bebout <nb@fedoraproject.org> - 0.9.3-1
+- Update to 0.9.3
 * Thu Oct 13 2016 Nick Bebout <nb@fedoraproject.org> - 0.9.2-1
 - Update to 0.9.2
 * Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.8.1-2
