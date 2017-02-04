@@ -1,7 +1,7 @@
 %global pyname certbot-apache
 
 Name:       python-%{pyname}
-Version:    0.9.3
+Version:    0.11.1
 Release:    1%{?dist}
 Summary:    The apache plugin for certbot
 
@@ -35,6 +35,7 @@ Provides:      %{pyname} = %{version}-%{release}
 # an extension to the certbot python libraries
 Requires:      python2-certbot = %{version}
 Requires:      python-augeas
+Requires:      mod_ssl
 %if 0%{?fedora}
 #Recommend the CLI as that will be the interface most use
 Recommends:    certbot = %{version}
@@ -71,6 +72,9 @@ Plugin for certbot that allows for automatic configuration of apache
 
 
 %changelog
+* Sat Feb 04 2017 James Hogarth <james.hogarth@gmail.com> - 0.11.1-1
+- Upgrade to 0.11.1
+- Add requires on mod_ssl bz#1367943
 * Fri Oct 14 2016 Nick Bebout <nb@fedoraproject.org> - 0.9.3-1
 - Update to 0.9.3
 * Thu Oct 13 2016 Nick Bebout <nb@fedoraproject.org> - 0.9.2-1
