@@ -2,7 +2,7 @@
 
 Name:       python-%{pyname}
 Version:    0.11.1
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    The apache plugin for certbot
 
 License:    ASL 2.0
@@ -72,6 +72,9 @@ Plugin for certbot that allows for automatic configuration of apache
 
 
 %changelog
+* Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.11.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Sat Feb 04 2017 James Hogarth <james.hogarth@gmail.com> - 0.11.1-1
 - Upgrade to 0.11.1
 - Add requires on mod_ssl bz#1367943
