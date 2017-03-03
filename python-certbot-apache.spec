@@ -113,11 +113,13 @@ Plugin for certbot that allows for automatic configuration of apache
 %{python2_sitelib}/certbot_apache
 %{python2_sitelib}/certbot_apache-%{version}*.egg-info
 
+%if %{with python3}
 %files -n python3-%{pyname}
 %license LICENSE.txt
 %doc README.rst
 %{python3_sitelib}/certbot_apache
 %{python3_sitelib}/certbot_apache-%{version}*.egg-info
+%endif
 
 %changelog
 * Fri Mar 03 2017 James Hogarth <james.hogarth@gmail.com> - 0.12.0-1
