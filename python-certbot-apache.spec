@@ -8,7 +8,7 @@
 %endif
 
 Name:       python-%{pyname}
-Version:    0.12.0
+Version:    0.13.0
 Release:    1%{?dist}
 Summary:    The apache plugin for certbot
 
@@ -122,6 +122,8 @@ Plugin for certbot that allows for automatic configuration of apache
 %endif
 
 %changelog
+* Wed Apr 19 2017 James Hogarth <james.hogarth@gmail.com> - 0.13.0-1
+- update to 0.13.0
 * Fri Mar 03 2017 James Hogarth <james.hogarth@gmail.com> - 0.12.0-1
 - update to 0.12.0
 - add python3 compatibility
