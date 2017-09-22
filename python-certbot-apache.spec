@@ -8,7 +8,7 @@
 %endif
 
 Name:       python-%{pyname}
-Version:    0.18.1
+Version:    0.18.2
 Release:    1%{?dist}
 Summary:    The apache plugin for certbot
 
@@ -122,6 +122,9 @@ Plugin for certbot that allows for automatic configuration of apache
 %endif
 
 %changelog
+* Fri Sep 22 2017 Nick Bebout <nb@fedoraproject.org> - 0.18.2-1
+- Update to 0.18.2
+
 * Sun Sep 10 2017 Nick Bebout <nb@fedoraproject.org> - 0.18.1-1
 - Update to 0.18.1
 
