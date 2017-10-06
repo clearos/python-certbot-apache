@@ -43,7 +43,7 @@ Plugin for certbot that allows for automatic configuration of apache
 %package -n python2-%{pyname}
 
 # Provide the name users expect as a certbot plugin
-%if 0%{?rhel} <= 7
+%if ( 0%{?rhel} && 0%{?rhel} <= 7 ) || ( 0%{?fedora} && 0%{?fedora} <= 25 )
 Provides:      %{pyname} = %{version}-%{release}
 %endif
 
@@ -130,6 +130,9 @@ Plugin for certbot that allows for automatic configuration of apache
 %endif
 
 %changelog
+* Fri Oct 6 2017 Eli Young <elyscape@gmail.com> - 0.18.2-2
+- Fix condition on provides for Fedora pre-26 - bz#1497314
+
 * Mon Oct 2 2017 Nick Bebout <nb@fedoraproject.org> - 0.18.2-2
 - Fix provides - bz#1497314
 
